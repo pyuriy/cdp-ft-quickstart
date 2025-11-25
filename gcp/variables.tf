@@ -23,7 +23,7 @@ variable "env_prefix" {
   }
   validation {
     condition     = (var.env_prefix == null ? true : can(regex("^[a-z0-9-]{1,12}$", var.env_prefix)))
-    error_message = "env_prefix can consist only of lowercase letters, numbers, and hyphens (-)."
+    error_message = "The env_prefix can consist only of lowercase letters, numbers, and hyphens (-)."
   }
 
 }
@@ -145,7 +145,7 @@ variable "cdp_groups" {
   type = set(object({
     name                          = string
     create_group                  = bool
-    sync_membership_on_user_login = optional(bool)
+    sync_membership_on_user_login = bool
     add_id_broker_mappings        = bool
     })
   )
@@ -205,9 +205,9 @@ variable "cdp_subnet_names" {
 
 variable "datalake_image" {
   type = object({
-    id           = optional(string)
-    catalog_name = optional(string)
-    os           = optional(string)
+    id           = string
+    catalog_name = string
+    os           = string
   })
   description = "The image to use for the datalake. Can only be used when 'datalake_version' is null."
   default     = null
