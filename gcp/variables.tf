@@ -19,6 +19,26 @@ variable "gcp_credentials_file" {
   default     = null
 }
 
+variable "cdp_profile" {
+  type        = string
+  description = "CDP profile name to use for authentication (from ~/.cdp/credentials file)"
+  default     = "default"
+}
+
+variable "cdp_access_key_id" {
+  type        = string
+  description = "CDP Access Key ID. Can also be set via CDP_ACCESS_KEY_ID environment variable"
+  default     = null
+  sensitive   = true
+}
+
+variable "cdp_private_key" {
+  type        = string
+  description = "CDP Private Key. Can also be set via CDP_PRIVATE_KEY environment variable"
+  default     = null
+  sensitive   = true
+}
+
 variable "env_prefix" {
   type        = string
   description = "Shorthand name for the environment. Used in resource descriptions"

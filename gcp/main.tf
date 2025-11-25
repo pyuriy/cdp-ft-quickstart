@@ -44,6 +44,12 @@ provider "google" {
   region      = var.gcp_region
 }
 
+provider "cdp" {
+  cdp_profile        = var.cdp_profile
+  cdp_access_key_id  = var.cdp_access_key_id
+  cdp_private_key    = var.cdp_private_key
+}
+
 
 module "cdp_gcp_prereqs" {
   source = "git::https://github.com/cloudera-labs/terraform-cdp-modules.git//modules/terraform-cdp-gcp-pre-reqs?ref=v0.12.1"
