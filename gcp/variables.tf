@@ -13,6 +13,12 @@
 # limitations under the License.
 
 # ------- Global settings -------
+variable "gcp_credentials_file" {
+  type        = string
+  description = "Path to the GCP service account credentials JSON file"
+  default     = null
+}
+
 variable "env_prefix" {
   type        = string
   description = "Shorthand name for the environment. Used in resource descriptions"

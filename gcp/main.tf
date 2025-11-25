@@ -39,7 +39,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("/home/yvp/gcp-terraform-139ca.json")
+  credentials = var.gcp_credentials_file != null ? file(var.gcp_credentials_file) : null
   project     = var.gcp_project
   region      = var.gcp_region
 }
