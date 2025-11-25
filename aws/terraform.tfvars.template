@@ -34,7 +34,7 @@ deployment_template = "<ENTER_VALUE>"  # Specify the deployment pattern below. O
 
 # aws_key_pair = "<ENTER_VALUE>" # Set this to specify the name of a pre-existing AWS keypair, e.g. my-keypair
 
-# If required use the variable below for any additional CIDRs to add the the AWS Security Groups
+# If required use the variable below for any additional CIDRs to add to the AWS Security Groups
 # When commented UI and SSH access will be allowed only from the public IP of executing host.
 # ingress_extra_cidrs_and_ports = {
 # cidrs = ["<ENTER_IP_VALUE>/32", "<ENTER_IP_VALUE>/32"],
@@ -48,7 +48,7 @@ deployment_template = "<ENTER_VALUE>"  # Specify the deployment pattern below. O
 
 # cdp_vpc_id="<ENTER_EXISTING_VPC_ID>" # VPC ID for CDP environment. Required if create_vpc is false
 # cdp_public_subnet_ids=["<ENTER_EXISTING_PUBLIC_SUBNET_ID>","<ENTER_EXISTING_PUBLIC_SUBNET_ID>"] # List of pre-existing public subnet ids. Required if create_vpc is false. NOTE: Can be an empty list depending on deployment_template.
-# cdp_private_subnet_ids=["<ENTER_EXISTING_PRIVATE_SUBNET_ID>,<ENTER_EXISTING_PRIVATE_SUBNET_ID>"] # List of pre-existing private subnet ids. Required if create_vpc is false
+# cdp_private_subnet_ids=["<ENTER_EXISTING_PRIVATE_SUBNET_ID>","<ENTER_EXISTING_PRIVATE_SUBNET_ID>"] # List of pre-existing private subnet ids. Required if create_vpc is false
 
 # ------- Optional inputs for Control Plane Connectivity in fully private environment -------
 # private_network_extensions=true # Set to false if external networking connectivity to CDP Control Plane exists
