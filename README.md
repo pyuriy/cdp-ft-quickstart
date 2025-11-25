@@ -95,15 +95,13 @@ aws configure
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `env_prefix` | Prefix for naming resources (max 8 chars) | Required |
-| `aws_region` | AWS region for deployment | `us-west-2` |
-| `deployment_template` | Deployment pattern: `public`, `semi-private`, or `private` | `semi-private` |
-| `datalake_scale` | Data Lake scale: `LIGHT_DUTY`, `ENTERPRISE`, or `MEDIUM_DUTY_HA` | `LIGHT_DUTY` |
+| `env_prefix` | Prefix for naming resources (max 12 chars) | Required |
+| `aws_region` | AWS region for deployment | Required |
+| `deployment_template` | Deployment pattern: `public`, `semi-private`, or `private` | Required |
+| `datalake_scale` | Data Lake scale: `LIGHT_DUTY`, `ENTERPRISE`, or `MEDIUM_DUTY_HA` | `null` |
+| `datalake_version` | Data Lake runtime version (`latest` or semantic version) | `latest` |
 | `enable_raz` | Enable Ranger Authorization Service | `true` |
-| `enable_ccm_tunnel` | Enable CCM tunnel | `true` |
-| `workload_analytics` | Enable workload analytics | `true` |
-| `freeipa_instances` | Number of FreeIPA instances (2-3) | `3` |
-| `tags` | Tags to apply to all resources | `{}` |
+| `env_tags` | Tags to apply to all resources | `null` |
 
 ## Deployment Templates
 

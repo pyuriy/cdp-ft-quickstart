@@ -69,7 +69,7 @@ variable "datalake_async_creation" {
 
 variable "datalake_scale" {
   type        = string
-  description = "The scale of the datalake. Valid values are LIGHT_DUTY, ENTERPRISE."
+  description = "The scale of the datalake. Valid values are LIGHT_DUTY, ENTERPRISE, or MEDIUM_DUTY_HA."
 
   validation {
     condition     = (var.datalake_scale == null ? true : contains(["LIGHT_DUTY", "ENTERPRISE", "MEDIUM_DUTY_HA"], var.datalake_scale))
